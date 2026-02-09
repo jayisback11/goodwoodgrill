@@ -151,7 +151,7 @@ const Navigation = () => {
 };
 
 const HeroSection = () => (
-  <section className="relative min-h-screen bg-cream flex items-center pt-28 overflow-hidden">
+  <section className="relative min-h-screen bg-cream flex items-center pt-24 overflow-hidden">
     <div className="absolute inset-0 bg-diner-pattern opacity-50"></div>
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
       <div className="space-y-8 animate-fade-in">
