@@ -1,0 +1,133 @@
+/* Animation delays for staggered reveals */
+.animate-delay-100 {
+    animation-delay: 100ms;
+}
+.animate-delay-200 {
+    animation-delay: 200ms;
+}
+.animate-delay-300 {
+    animation-delay: 300ms;
+}
+.animate-delay-400 {
+    animation-delay: 400ms;
+}
+.animate-delay-500 {
+    animation-delay: 500ms;
+}
+
+/* Paper texture overlay */
+.paper-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: overlay;
+    opacity: 0.03;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0px 0px #2F4F4F;
+}
+
+/* Button press effect */
+.btn-press {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-press:hover {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px 0px #2F4F4F;
+}
+.btn-press:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px 0px #2F4F4F;
+}
+
+/* Image zoom effect */
+.img-zoom {
+    transition: transform 0.5s ease;
+}
+.img-zoom:hover {
+    transform: scale(1.05);
+}
+
+/* Gradient overlays */
+.gradient-overlay-dark {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.gradient-overlay-red {
+    background: linear-gradient(135deg, rgba(124,10,2,0.9) 0%, rgba(90,6,1,0.95) 100%);
+}
+
+/* Reviews horizontal scroll */
+.reviews-scroll {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.reviews-scroll > * {
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar for reviews */
+.reviews-scroll::-webkit-scrollbar {
+    display: none;
+}
+.reviews-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Subtle background pattern */
+.bg-diner-pattern {
+    background-color: #FDFBF7;
+    background-image: radial-gradient(#708090 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+}
+
+/* Stars rating */
+.star-filled {
+    color: #FFDB58;
+}
+.star-empty {
+    color: #708090;
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+    animation: slideDown 0.3s ease forwards;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-subtle {
+    0%, 100% {
+        box-shadow: 4px 4px 0px 0px #2F4F4F;
+    }
+    50% {
+        box-shadow: 4px 4px 0px 0px #2F4F4F, 0 0 0 8px rgba(124, 10, 2, 0.1);
+    }
+}
+.pulse-cta {
+    animation: pulse-subtle 2s infinite;
+}
+
+/* Day badge rotation */
+.day-badge {
+    transform: rotate(-3deg);
+}
+
+/* Handwritten style for specials */
+.handwritten-note {
+    transform: rotate(-2deg);
+}
