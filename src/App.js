@@ -11,70 +11,76 @@ import { Button } from "@/components/ui/button";
 // --- DATA CONSTANTS ---
 
 const FULL_MENU = [
-  // Specialties
-  { name: "8 oz. Hamburger Steak", price: "$12.99", category: "Specialties", description: "Served with mashed potatoes & gravy, salad & garlic bread." },
-  { name: "12 oz. Hamburger Steak", price: "$13.99", category: "Specialties", description: "Served with mashed potatoes & gravy, salad & garlic bread." },
-  { name: "Grilled Chicken Platter", price: "$13.99", category: "Specialties", description: "Juicy grilled chicken breast with your choice of 2 sides." },
-  { name: "Grilled Shrimp Platter", price: "$13.99", category: "Specialties", description: "Fresh seasoned shrimp grilled to perfection." },
-  { name: "Red Beans & Rice Platter", price: "$12.99", category: "Specialties", description: "A Louisiana classic served with smoked sausage." },
-  { name: "Chicken Kabob", price: "$13.99", category: "Specialties", description: "Served with salad, hummus & pita bread." },
-  { name: "Shrimp Kabob", price: "$14.99", category: "Specialties", description: "Fresh shrimp grilled on a skewer with savory seasoning." },
-  { name: "Side by Side", price: "$11.99", category: "Specialties", description: "Grilled chicken or grilled shrimp w/ grilled vegetables." },
-  { name: "Shrimp Wrap", price: "$10.99", category: "Specialties", description: "Fresh shrimp wrapped in a soft tortilla with house dressing." },
-  { name: "Chicken Wrap", price: "$9.99", category: "Specialties", description: "Grilled chicken wrapped in a soft tortilla with house dressing." },
-  { name: "Grilled Tilapia Platter", price: "$14.99", category: "Specialties", description: "Lightly seasoned and grilled tilapia fillet." },
-
-  // Po-Boys
+  // PO-BOYS (12-INCH)
   { name: "Grilled Chicken Po-Boy", price: "$9.99", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
   { name: "Fried Catfish Po-Boy", price: "$9.99", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
-  { name: "Fried Shrimp Po-Boy", price: "$11.59", category: "Po-Boys", description: "Crispy fried shrimp on local French bread." },
+  { name: "Fried Shrimp Po-Boy", price: "$11.59", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
   { name: "Grilled Shrimp Po-Boy", price: "$12.99", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
-  { name: "Sm. Hamburger Po-Boy", price: "$7.99", category: "Po-Boys", description: "Traditional burger po-boy style." },
-  { name: "Lg. Hamburger Po-Boy", price: "$9.99", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
-  { name: "Steak Philly", price: "$11.99", category: "Po-Boys", description: "Grilled onions, mushrooms, bell peppers & jalapenos." },
-  { name: "Grilled Chicken Philly", price: "$11.99", category: "Po-Boys", description: "Philly style with chicken and swiss cheese." },
-  { name: "Grilled Shrimp Philly", price: "$11.99", category: "Po-Boys", description: "The ultimate seafood Philly combo." },
-  { name: "1/2 Shrimp or Catfish Po-Boy Combo", price: "$12.99", category: "Po-Boys", description: "Served with fries & a drink." },
+  
+  // BURGERS
+  { name: "Hamburger", price: "$7.69", category: "Burgers", description: "Dressed with mayo, lettuce, tomato, pickle & mustard." },
+  { name: "Cheeseburger", price: "$7.99", category: "Burgers", description: "Dressed with mayo, lettuce, tomato, pickle & mustard." },
+  { name: "Bacon Cheeseburger", price: "$8.39", category: "Burgers", description: "Dressed with mayo, lettuce, tomato, pickle & mustard." },
+  { name: "Mushroom Cheeseburger", price: "$8.39", category: "Burgers", description: "Dressed with mayo, lettuce, tomato, pickle & mustard." },
+  { name: "Mega Burger", price: "$9.99", category: "Burgers", description: "Grilled onions, mushrooms, jalapeno, bacon & cheese." },
+  { name: "BLT", price: "$6.29", category: "Burgers", description: "Bacon, lettuce, tomatoes & mayo." },
 
-  // Burgers & Combos
-  { name: "Hamburger", price: "$7.69", category: "Burgers", description: "The classic Goodwood burger." },
-  { name: "Cheeseburger", price: "$7.99", category: "Burgers", description: "Classic burger with melted American cheese." },
-  { name: "Bacon or Mushroom Cheeseburger", price: "$8.39", category: "Burgers", description: "Topped with your choice of crispy bacon or sautéed mushrooms." },
-  { name: "Mega Burger", price: "$9.99", category: "Burgers", description: "Grilled onions, mushrooms, jalapenos, bacon & cheese." },
-  { name: "Patty Melt", price: "$8.99", category: "Burgers", description: "Grilled onions and cheese on toasted bread." },
-  { name: "BLT", price: "$6.39", category: "Burgers", description: "Bacon, lettuce, and tomato on toasted bread." },
-  { name: "Chicken Club", price: "$9.99", category: "Burgers", description: "Triple decker with chicken and bacon." },
-  { name: "Hamburger Super Value", price: "$12.49", category: "Burgers", description: "Combo includes fries & drink." },
-  { name: "Cheeseburger Super Value", price: "$12.99", category: "Burgers", description: "Combo includes fries & drink." },
+  // BASKETS (Served with French Fries & Garlic Bread)
+  { name: "Catfish Basket", price: "$11.99", category: "Baskets", description: "Fried catfish served with French fries & garlic bread." },
+  { name: "Shrimp Basket", price: "$12.99", category: "Baskets", description: "Fried shrimp served with French fries & garlic bread." },
+  { name: "Combo Basket", price: "$13.99", category: "Baskets", description: "Catfish and shrimp served with French fries & garlic bread." },
 
-  // Fried Seafood
-  { name: "Catfish Basket", price: "$11.99", category: "Seafood", description: "Served with fries & garlic bread." },
-  { name: "Shrimp Basket", price: "$12.99", category: "Seafood", description: "Served with fries & garlic bread." },
-  { name: "Combo Basket", price: "$13.99", category: "Seafood", description: "Catfish and Shrimp combo with fries." },
-  { name: "Catfish Platter", price: "$13.99", category: "Seafood", description: "Platters served with your choice of two sides." },
-  { name: "Shrimp Platter", price: "$13.99", category: "Seafood", description: "Platters served with your choice of two sides." },
-  { name: "Combo Platter", price: "$15.99", category: "Seafood", description: "The ultimate seafood platter feast with 2 sides, garlic bread, and hush puppies." },
+  // LOW CARB MENU
+  { name: "Shrimp Wrap", price: "$10.99", category: "Low Carb", description: "Dressed with lettuce, tomato, mayo and pickles." },
+  { name: "Chicken Wrap", price: "$9.99", category: "Low Carb", description: "Dressed with lettuce, tomato, mayo and pickles." },
+  { name: "Side-By-Side (Chicken)", price: "$11.99", category: "Low Carb", description: "Grilled chicken with grilled vegetables." },
+  { name: "Side-By-Side (Shrimp)", price: "$12.99", category: "Low Carb", description: "Grilled shrimp with grilled vegetables." },
 
-  // Salads
-  { name: "Green Salad", price: "$5.99", category: "Salads", description: "Fresh mixed greens and seasonal vegetables." },
-  { name: "Greek Salad", price: "$7.39", category: "Salads", description: "Feta, olives, and greek dressing." },
-  { name: "Chicken Salad", price: "$11.99", category: "Salads", description: "Grilled or fried chicken on fresh greens." },
-  { name: "Greek Chicken Salad", price: "$12.99", category: "Salads", description: "Fresh greens with feta and grilled chicken." },
-  { name: "Shrimp Salad", price: "$13.99", category: "Salads", description: "Grilled or fried shrimp over mixed greens." },
+  // SPECIALTIES
+  { name: "8oz Hamburger Steak", price: "$12.99", category: "Specialties", description: "Fresh ground beef covered with grilled onions, mushroom gravy. Served with salad, smothered potatoes and garlic bread." },
+  { name: "12oz Hamburger Steak", price: "$13.99", category: "Specialties", description: "Fresh ground beef covered with grilled onions, mushroom gravy. Served with salad, smothered potatoes and garlic bread." },
+  { name: "Grilled Chicken Platter", price: "$13.99", category: "Specialties", description: "10 oz. marinated grilled chicken breast. Served with choice of two sides and pita bread." },
+  { name: "Grilled Tilapia Platter", price: "$14.99", category: "Specialties", description: "Served with choice of two sides." },
+  { name: "Chicken Club", price: "$9.99", category: "Specialties", description: "Grilled chicken breast topped with bacon and Swiss. Dressed with mayo, lettuce and tomato on a bun." },
+  { name: "Steak Philly", price: "$11.99", category: "Specialties", description: "Grilled with onions, mushrooms, bell peppers & jalapenos." },
+  { name: "Grilled Chicken Philly", price: "$11.99", category: "Specialties", description: "Grilled with onions, mushrooms, bell peppers & jalapenos." },
+  { name: "Shrimp Philly", price: "$11.99", category: "Specialties", description: "Grilled with onions, mushrooms, bell peppers & jalapenos." },
+  { name: "Patty Melt", price: "$8.99", category: "Specialties", description: "10 oz. fresh ground beef, grilled onions, Swiss or American cheese on rye bread." },
+  { name: "Red Beans & Rice Platter", price: "$12.99", category: "Specialties", description: "Served Monday-Friday. Choice of Sausage or Chicken Fried Steak with salad and garlic bread." },
+  { name: "Chicken Kabob", price: "$13.99", category: "Specialties", description: "Served with salad, hummus, and pita bread." },
+  { name: "Shrimp Kabob", price: "$14.99", category: "Specialties", description: "Served with salad, hummus, and pita bread." },
 
-  // Kids Menu
-  { name: "Kids Hamburger", price: "$5.99", category: "Kids", description: "Pickles & Ketchup only. Served with French fries." },
+  // FRIED SEAFOOD PLATTERS (Served with choice of two sides)
+  { name: "Fried Catfish Platter", price: "$12.99", category: "Seafood", description: "Fried golden brown and served with choice of two sides." },
+  { name: "Fried Shrimp Platter", price: "$13.99", category: "Seafood", description: "Jumbo shrimp fried golden brown with choice of two sides." },
+  { name: "Combination Platter", price: "$15.99", category: "Seafood", description: "Catfish and shrimp combo with choice of two sides." },
+  { name: "Grilled Shrimp Platter", price: "$14.99", category: "Seafood", description: "Seasoned jumbo shrimp served with choice of two sides." },
+
+  // SALADS
+  { name: "Green Salad", price: "$5.99", category: "Salads", description: "Lettuce, tomato, cheese, olives & crackers." },
+  { name: "Greek Salad", price: "$7.29", category: "Salads", description: "Lettuce, tomato, olives, feta and pita bread." },
+  { name: "Grilled Chicken Salad", price: "$11.99", category: "Salads", description: "Diced marinated chicken, cheese, tomato, and olives on green salad with pita bread." },
+  { name: "Greek Chicken Salad", price: "$11.99", category: "Salads", description: "Diced marinated chicken, feta, tomato, and olives on green salad with pita and Greek dressing." },
+  { name: "Shrimp Salad (Fried or Grilled)", price: "$13.99", category: "Salads", description: "Jumbo shrimp, cheese, tomato, olives, and boiled eggs on green salad." },
+
+  // KIDS MENU
+  { name: "Kids Hamburger", price: "$5.99", category: "Kids", description: "Pickles & Ketchup only. Served with fries." },
   { name: "Kids Shrimp Basket", price: "$6.99", category: "Kids", description: "Served with French fries." },
   { name: "Kids Catfish Basket", price: "$6.99", category: "Kids", description: "Served with French fries." },
-  { name: "Kids Chicken Tender", price: "$6.99", category: "Kids", description: "Served with French fries." },
-  { name: "Kids Grilled Cheese", price: "$4.99", category: "Kids", description: "Served with French fries." },
+  { name: "Kids Chicken Tender Bskt", price: "$6.99", category: "Kids", description: "Served with French fries." },
+  { name: "Grilled Cheese Sandwich", price: "$4.99", category: "Kids", description: "Served with French fries." },
 
-  // Sides
-  { name: "Cajun Curly Fries", price: "$3.49", category: "Sides", description: "Sm $3.49 / Lg $4.29" },
-  { name: "French Fries", price: "$2.99", category: "Sides", description: "Sm $2.99 / Lg $3.99" },
-  { name: "Onion Rings", price: "$4.99", category: "Sides", description: "Sm $4.99 / Lg $6.99" },
-  { name: "Sweet Potato Fries", price: "$3.99", category: "Sides", description: "Sm $3.99 / Lg $5.99" },
-  { name: "Hummus Dip", price: "$5.59", category: "Sides", description: "Creamy hummus served with pita." }
+  // SIDE ORDERS
+  { name: "Cajun Curly Ques", price: "$3.29", category: "Sides", description: "Small $3.29 | Large $4.99" },
+  { name: "French Fries", price: "$2.99", category: "Sides", description: "Small $2.99 | Large $4.29" },
+  { name: "Onion Rings", price: "$4.99", category: "Sides", description: "Small $4.99 | Large $6.99" },
+  { name: "Sweet Potato Fries", price: "$3.99", category: "Sides", description: "Small $3.99 | Large $5.99" },
+  { name: "Red Beans & Rice", price: "$4.99", category: "Sides", description: "Small $4.99 | Large $6.99" },
+  { name: "Mash Potatoes w/ Gravy", price: "$2.99", category: "Sides", description: "Small $2.99 | Large $4.99" },
+  { name: "Macaroni & Cheese", price: "$4.99", category: "Sides", description: "Creamy mac & cheese." },
+  { name: "Grilled Vegetables", price: "$4.99", category: "Sides", description: "Freshly grilled." },
+  { name: "Hummus Dip", price: "$5.59", category: "Sides", description: "Served with pita." },
+  { name: "Garlic Bread", price: "$.95", category: "Sides", description: "Toasted garlic bread." }
 ];
 
 const DAILY_SPECIALS = [
@@ -110,21 +116,25 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <a href="#" className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-barn-red rounded-full flex items-center justify-center shadow-retro-sm">
-                <Utensils className="w-6 h-6 text-mustard" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-barn-red rounded-full flex items-center justify-center shadow-retro-sm">
+                <Utensils className="w-5 h-5 sm:w-6 sm:h-6 text-mustard" />
               </div>
-              <span className="font-heading text-2xl text-barn-red hidden sm:block">Goodwood Grill</span>
+              <span className="font-heading text-xl sm:text-2xl text-barn-red hidden lg:block">Goodwood Grill</span>
             </a>
 
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#specials" className="font-subheading text-xl text-slate hover:text-barn-red transition-colors">Daily Specials</a>
-              <a href="#menu" className="font-subheading text-xl text-slate hover:text-barn-red transition-colors">Menu</a>
-              <a href="#reviews" className="font-subheading text-xl text-slate hover:text-barn-red transition-colors">Reviews</a>
-              <a href="#location" className="font-subheading text-xl text-slate hover:text-barn-red transition-colors">Location</a>
-               <a href="#location" className="font-subheading text-xl text-slate hover:text-barn-red transition-colors">Contact</a>
-              <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-barn-red text-white font-bold uppercase px-6 py-3 rounded-lg shadow-retro btn-press">Order Online</Button>
-              </a>
+            <div className="hidden md:flex items-center gap-4 lg:gap-8">
+              <a href="#specials" className="font-subheading text-lg lg:text-xl text-slate hover:text-barn-red transition-colors">Specials</a>
+              <a href="#menu" className="font-subheading text-lg lg:text-xl text-slate hover:text-barn-red transition-colors">Menu</a>
+              <a href="#location" className="font-subheading text-lg lg:text-xl text-slate hover:text-barn-red transition-colors">Location</a>
+              
+              <div className="flex items-center gap-3">
+                <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-barn-red text-white font-bold uppercase text-xs lg:text-sm px-4 py-2 rounded-lg shadow-retro btn-press">Pick Up</Button>
+                </a>
+                <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-425895/" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#FF3008] text-white font-bold uppercase text-xs lg:text-sm px-4 py-2 rounded-lg shadow-retro btn-press">DoorDash</Button>
+                </a>
+              </div>
             </div>
 
             <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -138,10 +148,14 @@ const Navigation = () => {
               <a href="#menu" onClick={() => setIsOpen(false)} className="block font-subheading text-xl text-slate">Menu</a>
               <a href="#reviews" onClick={() => setIsOpen(false)} className="block font-subheading text-xl text-slate">Reviews</a>
               <a href="#location" onClick={() => setIsOpen(false)} className="block font-subheading text-xl text-slate">Location</a>
-               <a href="#location" onClick={() => setIsOpen(false)} className="block font-subheading text-xl text-slate">Contact</a>
-              <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full bg-barn-red text-white py-3 rounded-lg shadow-retro">Order Online</Button>
-              </a>
+              <div className="flex flex-col gap-3 pt-2">
+                <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-barn-red text-white py-3 rounded-lg shadow-retro">Pick Up on ToastTab</Button>
+                </a>
+                <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-425895/" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-[#FF3008] text-white py-3 rounded-lg shadow-retro">Deliver on DoorDash</Button>
+                </a>
+              </div>
             </div>
           )}
         </div>
@@ -160,12 +174,23 @@ const HeroSection = () => (
           Baton Rouge's Home for <span className="text-barn-red">Real Comfort Food</span>
         </h1>
         <p className="font-body text-lg text-slate-light max-w-xl">Massive burgers, fresh seafood, and homestyle specials made fresh every day on Goodwood Blvd.</p>
+        
         <div className="flex flex-col sm:flex-row gap-4">
           <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-            <Button className="w-full bg-barn-red text-white font-bold px-8 py-4 text-lg rounded-lg shadow-retro btn-press">Order Online Now <ArrowRight className="ml-2 w-5 h-5" /></Button>
+            <Button className="w-full bg-barn-red text-white font-bold px-8 py-4 text-lg rounded-lg shadow-retro btn-press">
+              Pick Up on ToastTab <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </a>
-          <a href="#specials" className="w-full sm:w-auto">
-            <Button className="w-full bg-mustard text-slate font-bold px-8 py-4 text-lg rounded-lg shadow-retro btn-press">View Today's Specials</Button>
+          <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-425895/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button className="w-full bg-[#FF3008] text-white font-bold px-8 py-4 text-lg rounded-lg shadow-retro btn-press">
+              Deliver on DoorDash
+            </Button>
+          </a>
+        </div>
+        
+        <div>
+          <a href="#specials" className="inline-block">
+            <Button className="bg-mustard text-slate font-bold px-8 py-3 text-lg rounded-lg shadow-retro btn-press">View Today's Specials</Button>
           </a>
         </div>
       </div>
@@ -190,8 +215,9 @@ const DailySpecialsSection = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Calendar className="w-12 h-12 text-barn-red mx-auto mb-4" />
-          <h2 className="font-heading text-4xl text-slate mb-4">Daily Specials</h2>
-          <p className="font-body text-lg text-slate-light">Fresh homestyle specials served with two sides & cornbread!</p>
+          <h2 className="font-heading text-4xl text-slate mb-2">Daily Specials</h2>
+          <p className="font-body text-lg text-slate-light mb-2">Fresh homestyle specials served with two sides & garlic bread!</p>
+          <p className="font-subheading text-xl text-barn-red font-bold underline decoration-mustard decoration-2">Special price is $12.99 on any other day.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {DAILY_SPECIALS.map((special) => (
@@ -221,7 +247,7 @@ const DailySpecialsSection = () => {
 const MenuSearchSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Specialties", "Po-Boys", "Burgers", "Seafood", "Salads", "Sides", "Kids"];
+  const categories = ["All", "Po-Boys", "Burgers", "Baskets", "Specialties", "Seafood", "Salads", "Low Carb", "Kids", "Sides"];
 
   const filteredMenu = useMemo(() => {
     return FULL_MENU.filter(item => {
