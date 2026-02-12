@@ -131,7 +131,7 @@ const Navigation = () => {
                 <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-barn-red text-white font-bold uppercase text-xs lg:text-sm px-4 py-2 rounded-lg shadow-retro btn-press">Pick Up</Button>
                 </a>
-                <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-425895/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-37983655/86901754/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-[#FF3008] text-white font-bold uppercase text-xs lg:text-sm px-4 py-2 rounded-lg shadow-retro btn-press">DoorDash</Button>
                 </a>
               </div>
