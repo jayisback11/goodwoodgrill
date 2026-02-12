@@ -152,7 +152,7 @@ const Navigation = () => {
                 <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer" className="block">
                   <Button className="w-full bg-barn-red text-white py-3 rounded-lg shadow-retro">Pick Up on ToastTab</Button>
                 </a>
-                <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-425895/" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://www.doordash.com/store/goodwood-grill-baton-rouge-37983655/86901754/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener noreferrer" className="block">
                   <Button className="w-full bg-[#FF3008] text-white py-3 rounded-lg shadow-retro">Deliver on DoorDash</Button>
                 </a>
               </div>
@@ -217,7 +217,7 @@ const DailySpecialsSection = () => {
           <Calendar className="w-12 h-12 text-barn-red mx-auto mb-4" />
           <h2 className="font-heading text-4xl text-slate mb-2">Daily Specials</h2>
           <p className="font-body text-lg text-slate-light mb-2">Fresh homestyle specials served with two sides & garlic bread!</p>
-          <p className="font-subheading text-xl text-barn-red font-bold underline decoration-mustard decoration-2">Special price is $12.99 on any other day.</p>
+          <p className="font-subheading text-xl text-barn-red font-bold underline decoration-mustard decoration-2">Special price for Monday, Tuesday, and Saturday is $12.99 on any other day.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {DAILY_SPECIALS.map((special) => (
