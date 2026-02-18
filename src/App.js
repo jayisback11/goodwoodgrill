@@ -16,7 +16,7 @@ const FULL_MENU = [
   { name: "Fried Catfish Po-Boy", price: "$9.99", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
   { name: "Fried Shrimp Po-Boy", price: "$11.59", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
   { name: "Grilled Shrimp Po-Boy", price: "$12.99", category: "Po-Boys", description: "Dressed with mayo, lettuce, tomato & pickle." },
-  
+
   // BURGERS
   { name: "Hamburger", price: "$7.69", category: "Burgers", description: "Dressed with mayo, lettuce, tomato, pickle & mustard." },
   { name: "Cheeseburger", price: "$7.99", category: "Burgers", description: "Dressed with mayo, lettuce, tomato, pickle & mustard." },
@@ -126,7 +126,7 @@ const Navigation = () => {
               <a href="#specials" className="font-subheading text-lg lg:text-xl text-slate hover:text-barn-red transition-colors">Specials</a>
               <a href="#menu" className="font-subheading text-lg lg:text-xl text-slate hover:text-barn-red transition-colors">Menu</a>
               <a href="#location" className="font-subheading text-lg lg:text-xl text-slate hover:text-barn-red transition-colors">Location</a>
-              
+
               <div className="flex items-center gap-3">
                 <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-barn-red text-white font-bold uppercase text-xs lg:text-sm px-4 py-2 rounded-lg shadow-retro btn-press">Pick Up</Button>
@@ -174,7 +174,7 @@ const HeroSection = () => (
           Baton Rouge's Home for <span className="text-barn-red">Real Comfort Food</span>
         </h1>
         <p className="font-body text-lg text-slate-light max-w-xl">Massive burgers, fresh seafood, and homestyle specials made fresh every day on Goodwood Blvd.</p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4">
           <a href="https://www.toasttab.com/local/order/goodwood-grill-market-8558-goodwood-blvd" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
             <Button className="w-full bg-barn-red text-white font-bold px-8 py-4 text-lg rounded-lg shadow-retro btn-press">
@@ -187,7 +187,7 @@ const HeroSection = () => (
             </Button>
           </a>
         </div>
-        
+
         <div>
           <a href="#specials" className="inline-block">
             <Button className="bg-mustard text-slate font-bold px-8 py-3 text-lg rounded-lg shadow-retro btn-press">View Today's Specials</Button>
@@ -210,32 +210,48 @@ const HeroSection = () => (
 
 const DailySpecialsSection = () => {
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+
   return (
     <section id="specials" className="py-20 bg-cream relative">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
         <div className="text-center mb-16">
           <Calendar className="w-12 h-12 text-barn-red mx-auto mb-4" />
           <h2 className="font-heading text-4xl text-slate mb-2">Daily Specials</h2>
-          <p className="font-body text-lg text-slate-light mb-2">Fresh homestyle specials served with two sides & garlic bread!</p>
-          <p className="font-subheading text-xl text-barn-red font-bold underline decoration-mustard decoration-2">Special price for Monday, Tuesday, and Saturday is $12.99 on any other day.</p>
+          <p className="font-body text-lg text-slate-light mb-2">
+            Fresh homestyle specials served with two sides & garlic bread!
+          </p>
+          <p className="font-subheading text-xl text-barn-red font-bold underline decoration-mustard decoration-2">
+            Special price for Monday, Tuesday, and Saturday is $12.99 on any other day.
+          </p>
         </div>
+
+        {/* Specials Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {DAILY_SPECIALS.map((special) => (
-            <div key={special.day} className={`relative overflow-hidden rounded-xl border-2 border-slate shadow-retro card-hover ${today === special.day ? 'ring-4 ring-mustard' : ''}`}>
-              <div className="relative h-64">
-                <img src={special.image} alt={special.dish} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 gradient-overlay-dark"></div>
-                <div className="absolute top-4 left-4">
-                  <span className={`px-4 py-1 rounded-full border-2 border-slate font-subheading ${today === special.day ? 'bg-mustard text-slate' : 'bg-white text-slate'}`}>{special.day}</span>
-                </div>
-                <div className="absolute bottom-0 p-6">
-                  <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-subheading text-2xl text-white">{special.dish}</h3>
-                    <span className="text-mustard font-bold">{special.price}</span>
-                  </div>
-                  <p className="font-body text-white/80 text-sm">{special.description}</p>
-                </div>
+            <div
+              key={special.day}
+              className={`relative p-6 rounded-xl border-2 border-slate shadow-retro card-hover bg-white ${today === special.day ? 'ring-4 ring-mustard' : ''
+                }`}
+            >
+              {/* Day Badge */}
+              <div className="mb-4">
+                <span className={`px-4 py-1 rounded-full border-2 border-slate font-subheading text-sm ${today === special.day ? 'bg-mustard text-slate' : 'bg-slate/5 text-slate'
+                  }`}>
+                  {special.day}
+                </span>
               </div>
+
+              {/* Dish Info */}
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="font-subheading text-2xl text-slate">{special.dish}</h3>
+                <span className="text-barn-red font-bold text-xl">{special.price}</span>
+              </div>
+
+              {/* Description */}
+              <p className="font-body text-slate-light text-base leading-relaxed">
+                {special.description}
+              </p>
             </div>
           ))}
         </div>
