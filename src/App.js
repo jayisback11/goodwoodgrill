@@ -119,7 +119,7 @@ const Navigation = () => {
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-barn-red rounded-full flex items-center justify-center shadow-retro-sm">
                 <Utensils className="w-5 h-5 sm:w-6 sm:h-6 text-mustard" />
               </div>
-              <span className="font-heading text-xl sm:text-2xl text-barn-red hidden lg:block">Goodwood Grill</span>
+              <span className="font-heading text-xl sm:text-2xl text-barn-red hidden lg:block">Restaurant Name</span>
             </a>
 
             <div className="hidden md:flex items-center gap-4 lg:gap-8">
@@ -352,7 +352,7 @@ const FooterSection = () => (
       <div>
         <div className="flex items-center gap-3 mb-6">
           <Utensils className="w-10 h-10 text-mustard" />
-          <span className="font-heading text-2xl">Goodwood Grill</span>
+          <span className="font-heading text-2xl">Restaurant</span>
         </div>
         <p className="text-white/70">Serving Baton Rouge's best comfort food since 2004.</p>
       </div>
@@ -364,7 +364,7 @@ const FooterSection = () => (
       <div>
         <h3 className="font-subheading text-2xl text-mustard mb-6">Contact</h3>
         <p className="flex items-center gap-2 mb-2"><Phone className="w-5 h-5" /> (225) 927-7550</p>
-        <p className="flex items-start gap-2"><MapPin className="w-5 h-5 mt-1" /> 8558 Goodwood Blvd<br />Baton Rouge, LA 70806</p>
+        <p className="flex items-start gap-2"><MapPin className="w-5 h-5 mt-1" /> 8558 Goodwood Blvd<br />Baton Rouge, LA 70806 TEST</p>
       </div>
       <div>
         <h3 className="font-subheading text-2xl text-mustard mb-6">Find Us</h3>
